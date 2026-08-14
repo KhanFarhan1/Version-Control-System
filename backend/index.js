@@ -19,7 +19,9 @@ yargs(hideBin(process.argv))
         type: "string",
       });
     },
-    addRepo,
+    (argv) => {
+      addRepo(argv.file);
+    },
   )
   .command("push", "push the respo", {}, pushRepo)
   .command("pull", "pull the respo", {}, pullRepo)
