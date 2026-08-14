@@ -45,7 +45,9 @@ yargs(hideBin(process.argv))
         type: "string",
       });
     },
-    commitRepo,
+    (argv) => {
+      commitRepo(argv.message);
+    },
   )
   .demandCommand(1, "You need atleast one command")
   .help().argv;
