@@ -9,7 +9,7 @@ async function initRepo() {
     await fs.mkdir(commitsPath, { recursive: true });
     await fs.writeFile(
       path.join(repoPath, "config.json"),
-      JSON.stringify({ bucket: "s3 bucket" }),
+      JSON.stringify({ bucket: process.env.S3_BUCKET }),
     );
     console.log("Init Cmd Work Successfully");
   } catch (error) {

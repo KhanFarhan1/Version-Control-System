@@ -1,3 +1,4 @@
 node_modules/
 .dummy_git/
+config/
 .env
